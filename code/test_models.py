@@ -401,5 +401,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--from_scratch", type=bool, default=False)
     parser.add_argument("--is_full_transcript_model", type=bool, default=True)
+    parser.add_argument("--manual_model", type=bool, default=False)
+    parser.add_argument("--model_name", type=str, default="")
     args = parser.parse_args()
-    test_model_from_scratch(args.from_scratch, args.is_full_transcript_model)
+    test_model_from_scratch(args.from_scratch, args.is_full_transcript_model, args.manual_model, args.model_name)
