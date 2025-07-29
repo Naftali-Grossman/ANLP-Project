@@ -1,20 +1,13 @@
-argparse
-ast
-collections
-flash-attn
-huggingface-hub
-matplotlib
-nbimporter
-numpy
-os
-pandas
-pickle
-re
-scikit-learn
-scikit-multilearn
-torch
-transformers
-wandb
+argparse==1.4.0
+huggingface-hub==0.34.3
+matplotlib==3.10.3
+numpy==2.3.2
+pandas==2.3.1
+scikit-learn==1.7.1
+scikit-multilearn==0.2.0
+torch==2.5.1
+transformers==4.54.0
+wandb==0.21.0
 
 
 
