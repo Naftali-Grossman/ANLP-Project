@@ -70,9 +70,10 @@ def plot_f1_and_count_both_axes(val_true_labels, pred_labels, train_dataset, mlb
 
     
 
-def test_model_from_scratch(from_scratch=False, is_full_transcript_model=True):
+def test_model_from_scratch(from_scratch=False, is_full_transcript_model=True, manual_model = False, model_name = ""):
     #Loading model and tokenizer
-    model_name = "Naftali1996/Full-Transcript" if is_full_transcript_model else "Naftali1996/Titles"
+    if not manual_model:
+        model_name = "Naftali1996/Full-Transcript" if is_full_transcript_model else "Naftali1996/Titles"
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
     tokenizer = AutoTokenizer.from_pretrained(model_name)
